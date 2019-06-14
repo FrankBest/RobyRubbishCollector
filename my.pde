@@ -11,7 +11,7 @@ void setup(){
 }
 
 void draw(){
-  frameRate(10);
+  //frameRate(10);
   if( moves < 200){
     showMap();
     roby.show();
