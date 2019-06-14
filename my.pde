@@ -11,12 +11,21 @@ void setup(){
 }
 
 void draw(){
-  frameRate(2);
+  frameRate(20);
   if( moves < 200){
     showMap();
     roby.show();
     roby.operate();
     moves++;
+  }
+}
+
+void keyPressed(){
+  if ( key == ' '){
+    roby.xpos = 6;
+    roby.ypos = 6;
+    moves = 0;
+    generateMap();
   }
 }
 
