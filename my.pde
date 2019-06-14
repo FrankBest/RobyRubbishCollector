@@ -11,7 +11,7 @@ void setup(){
 }
 
 void draw(){
-  frameRate(10);
+  frameRate(2);
   if( moves < 200){
     showMap();
     roby.show();
@@ -115,8 +115,18 @@ class Robot{
   }
   
   void show(){
+    char command = gene.charAt(detect());
     fill(0, 192, 0);
     ellipse(xpos * 50 + 25, ypos * 50 + 25, 30, 30);
+    textSize(24);
+    fill(255);
+    if (command == '1')  text("Next: up", 100, 588);
+    else if (command == '2')  text("Next: down", 100, 588);
+    else if (command == '3')  text("Next: left", 100, 588);
+    else if (command == '4')  text("Next: right", 100, 588);
+    else if (command == '5')  text("Next: pick", 100, 588);
+    else if (command == '6')  text("Next: random", 100, 588);
+    
   }
   
 }
